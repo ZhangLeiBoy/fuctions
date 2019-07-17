@@ -1,0 +1,10 @@
+//项目依赖
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':simple')
+    api project(':simple-exam')
+    api project(':simple-keyboard')
+    api project(':simple-recyclerview')
+    api project(':simple-design-patterns')
+    api project(':flutter')
+}

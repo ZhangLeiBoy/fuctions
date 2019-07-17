@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:bottomLeftRadius="@dimen/app_corner_radius"
+        android:bottomRightRadius="@dimen/app_corner_radius" />
+    <stroke
+        android:width="1px"
+        android:color="@color/app_line_color" />
+    <solid android:color="@color/app_bg_card" />
+</shape>

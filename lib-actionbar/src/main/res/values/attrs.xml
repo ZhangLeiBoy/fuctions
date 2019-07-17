@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonActionBar">
+        <attr name="actionbarStyle" format="reference" />
+        <attr name="height" format="dimension" />
+        <attr name="backgroundColor" format="color"></attr>
+        <attr name="titleColor" format="color"></attr>
+        <attr name="dividerColor" format="color"></attr>
+        <attr name="dividerVisible" format="boolean"></attr>
+        <attr name="titleTextSize" format="float"></attr>
+        <attr name="titleGravity">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="leftPadding" format="dimension" />
+        <attr name="rightPadding" format="dimension" />
+    </declare-styleable>
+
+    <style name="CommonActionBar">
+        <item name="height">45dip</item>
+        <item name="backgroundColor">@color/app_nav_bg</item>
+        <item name="titleColor">@color/app_nav_title</item>
+        <item name="dividerColor">@color/app_nav_bottom_line</item>
+        <item name="titleGravity">center</item>
+        <item name="titleTextSize">20</item>
+        <item name="dividerVisible">false</item>
+        <item name="leftPadding">0dp</item>
+        <item name="rightPadding">0dp</item>
+    </style>
+</resources>

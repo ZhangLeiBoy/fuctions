@@ -1,0 +1,20 @@
+//第三方引用
+dependencies {
+    api ('com.blankj:utilcode:1.17.0')                //基础工具库
+    api ("com.wang.avi:library:2.1.3")                //加载动画
+    api ('cn.dreamtobe.kpswitch:library:1.6.0')       //处理键盘面板切换闪屏
+    api ('com.jaeger.statusbaruitl:library:1.4.0')    //沉浸式导航栏
+    api ('com.r0adkll:slidableactivity:2.0.5')        //设置左滑切换activity的效果
+    api ('com.yanzhenjie:permission:2.0.0-rc11')      //AndPermission 权限处理
+    api ('cn.yipianfengye.android:zxing-library:2.2') //二维码
+    api ('io.reactivex.rxjava2:rxandroid:2.0.1')      //rxAndroid
+    api ('io.reactivex.rxjava2:rxjava:2.1.1')         //rxJava
+
+//    api 'com.github.f0ris.sweetalert:library:1.5.1'                 //dialog
+//    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'      //rxPermission
+//    api 'com.zhy:base-rvadapter:3.0.3'                              //封装适配器
+
+    //大屏适配
+    api 'me.jessyan:autosize:1.1.2'
+
+}

@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+//自定义第三方引用依赖
+apply from: '../build_project.gradle'
+
+
+android {
+    compileSdkVersion rootProject.CompileSdkVersion
+
+    useLibrary 'org.apache.http.legacy'
+    //设置签名信息
+    signingConfigs {
+        debug {
+            //填写之前Eclipse-Build里面的默认路径
+            storeFile file("../debug.keystore")
+        }
+        release {
+            //填写之前Eclipse-Build里面的默认路径
+            storeFile file("../lemon.keystore")
+            keyAlias rootProject.KeyAlias
+            storePassword rootProject.StorePassword
+            keyPassword rootProject.KeyPassword
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    //gradle 3.0 之后的更改输出名称的方式,
+    //更改输出apk名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def apkName = rootProject.App_Name + "_v" + rootProject.Version_Name + "_" + rootProject.Version_Code + ".apk"
+            outputFileName = apkName
+        }
+    }
+
+    //编译基
+    defaultConfig {
+        applicationId = rootProject.Package_Name
+        versionName = rootProject.Version_Name
+        versionCode = rootProject.Version_Code
+        minSdkVersion rootProject.MinSdkVersion
+        targetSdkVersion rootProject.TargetSdkVersion
+        multiDexEnabled true
+
+        manifestPlaceholders = [
+                App_Name          : rootProject.App_Name,
+                Package_Name      : rootProject.Package_Name,
+                MINESDKVERSION    : rootProject.MinSdkVersion,
+                TARGETSDKVERSION  : rootProject.TargetSdkVersion,
+                PACKAGE_NAME      : rootProject.Package_Name,
+        ]
+
+
+//        ndk {
+//            // 设置支持的 SO 库构架
+////            abiFilters 'armeabi-v7a'
+////      ,'armeabi', 'arm64-v8a', 'x86' , 'x86_64', 'mips', 'mips64'
+//        }
+
+        compileOptions{
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+//            buildConfigField "boolean", "DEBUG_MODE", rootProject.DebugMode
+            buildConfigField "boolean", "DEBUG_MODE", "true"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+//            buildConfigField "boolean", "DEBUG_MODE", rootProject.DebugMode
+            buildConfigField "boolean", "DEBUG_MODE", "false"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //忽略校验png格式图片
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    //取消检查
+    lintOptions {
+        abortOnError false
+    }
+}

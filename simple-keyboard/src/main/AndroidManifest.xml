@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.albert.simple.keyboard">
+
+    <application>
+        <activity android:name="com.android.albert.MyKeyBoardActivity" />
+    </application>
+</manifest>

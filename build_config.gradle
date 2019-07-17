@@ -1,0 +1,28 @@
+//默认包名
+String defPackage = "com.android.albert"
+
+int defMinSdkVersion = 19
+int defTargetSdkVersion = 28
+int defCompileSdkVersion = 28
+
+//打包签名信息
+String defKeyAlias = "lemon"
+String defStorePassword = "hogesoft123"
+String defKeyPassword = "hogesoft123"
+
+//供子Mudule使用
+ext {
+    App_Name = AppName
+    Version_Name = VersionName
+    Version_Code = VersionCode as int
+
+    Package_Name = defPackage
+
+    KeyAlias = defKeyAlias
+    StorePassword = defStorePassword
+    KeyPassword = defKeyPassword
+
+    MinSdkVersion = defMinSdkVersion
+    TargetSdkVersion = defTargetSdkVersion
+    CompileSdkVersion = defCompileSdkVersion
+}

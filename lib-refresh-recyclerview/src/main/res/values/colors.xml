@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="refresh_loading_color">#3d99ff</color>
+    <color name="refrsh_theme_default_color1">#3d99ff</color>
+    <color name="refrsh_theme_default_color2">#f7f7f7</color>
+
+</resources>

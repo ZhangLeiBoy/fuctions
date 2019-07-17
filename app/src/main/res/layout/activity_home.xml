@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_main"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/to_rcy"
+            style="@style/main_text_enter_style"
+            android:text="Recyclerview" />
+
+        <TextView
+            android:id="@+id/to_keyboard"
+            style="@style/main_text_enter_style"
+            android:text="Keyboard" />
+
+        <TextView
+            android:id="@+id/to_qrcode"
+            style="@style/main_text_enter_style"
+            android:text="二维码" />
+
+        <TextView
+            android:id="@+id/to_ringstatistics"
+            style="@style/main_text_enter_style"
+            android:text="环形百分比统计" />
+
+        <TextView
+            android:id="@+id/to_statistics_progress"
+            style="@style/main_text_enter_style"
+            android:text="水平百分比统计" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--百分比环形统计-->
+    <declare-styleable name="RingStatisticsView">
+        <attr name="rsv_RingWidth" format="reference|dimension" />
+        <attr name="rsv_showPercent" format="reference|boolean" />
+        <attr name="rsv_CenterText" format="reference|string" />
+        <attr name="rsv_CenterNumber" format="reference|string" />
+        <attr name="rsv_CenterTextColor" format="reference|color" />
+        <attr name="rsv_CenterNumberColor" format="reference|color" />
+        <attr name="rsv_CenterTextSize" format="reference|dimension" />
+        <attr name="rsv_CenterNumberSize" format="reference|dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+//公共库
+apply from: '../build_support.gradle'
+
+android {
+    compileSdkVersion rootProject.CompileSdkVersion
+
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        minSdkVersion rootProject.MinSdkVersion
+        targetSdkVersion rootProject.TargetSdkVersion
+        versionCode rootProject.Version_Code
+        versionName rootProject.Version_Name
+    }
+    //忽略校验png格式图片
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    //取消检查
+    lintOptions {
+        abortOnError false
+    }
+}
+
+//上传源码后可查看注释
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+artifacts {
+    archives sourcesJar
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation('com.github.bumptech.glide:glide:4.7.1')
+    //编译库
+    annotationProcessor('com.github.bumptech.glide:compiler:4.7.1')
+}

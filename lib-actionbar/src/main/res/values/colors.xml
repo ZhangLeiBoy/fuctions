@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 导航栏色值-->
+    <color name="app_nav_bg">#3d99ff</color><!-- actionBar 背景色 -->
+    <color name="app_nav_bottom_line">#a6a6a6</color>
+    <color name="app_nav_title">#ffffff</color><!-- actionBar title 颜色 -->
+    <color name="app_nav_title_sub">#a6a6a6</color><!-- actionBar title 颜色 -->
+
+    <color name="app_nav_second_text">#ffffff</color><!-- 文本颜色 如保存 取消之类的 -->
+    <color name="app_nav_second_text_uncheck">#d0d3d5</color><!-- 文本颜色 如保存 取消之类的不可点击效果 -->
+
+</resources>

@@ -1,0 +1,24 @@
+include ':app'
+//
+include ':frame-image'
+include ':frame-logs'
+//include ':frame-network'
+//include ':frame-hybrid'
+//include ':frame-database'
+//include ':frame-broadcast'
+//include ':frame-permission'
+//
+include ':lib-actionbar'
+include ':lib-refresh-recyclerview'
+include ':lib-base'
+//
+include ':simple'
+include ':simple-exam'
+include ':simple-keyboard'
+include ':simple-recyclerview'
+include ':simple-design-patterns'
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        '/Users/admin/Documents/work/code/Flutter/flutter_module/.android/include_flutter.groovy'
+))

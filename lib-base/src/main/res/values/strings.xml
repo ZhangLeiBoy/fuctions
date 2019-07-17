@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Demos</string>
+    <string name="app_tip">提示</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_confirm">确认</string>
+
+
+    <string name="permission_denied_retry">好的</string>
+    <string name="permission_denied_to_setting">去授权</string>
+    <string name="permission_denied_cancel">退出</string>
+    <string name="permission_denied_tip">获取授权失败</string>
+
+    <string name="permission_call">请开启打电话权限，不然无法使用此功能</string>
+    <string name="permission_sms">请开启读取短信权限，不然无法自动获取验证码</string>
+    <string name="permission_phone">请打开获取系统信息权限，不然无法使用此功能</string>
+    <string name="permission_camera">请打开相机和读取存储权限，保证相机功能能够正常使用</string>
+    <string name="permission_storge">请打开读取存储权限，不然无法使用此功能</string>
+    <string name="permission_location">请打开位置权限，不然无法使用此功能</string>
+    <string name="permission_audio">请打开录音和读取存储权限，不然无法使用此功能</string>
+    <string name="permission_calendar">请打开日历权限，不然无法使用此功能</string>
+    <string name="permission_contacts">请打开联系人权限，不然无法使用此功能</string>
+    <string name="permission_sensor">请打开传感器权限，不然无法使用此功能</string>
+    <string name="permission_welcome">请打开读取系统设置和存储以及定位权限，否则将无法正常使用App。</string>
+
+    <!-- 功能使用所需要的权限提示-->
+    <string name="permission_denied_tip1">请授予该功能所需基本权限,否则该功能将无法正常使用</string>
+    <string name="permission_denied_tip2">功能需要的基本权限被拒绝,是否到到应用权限设置授予权限?</string>
+    <!-- 启动页申请的基本权限-->
+    <string name="permission_denied_base_tip1">请授予应用需要的基本权限,否则程序可能无法正常运行</string>
+    <string name="permission_denied_base_tip2">应用需要的基本权限被拒绝,是否到到应用权限设置授予权限?</string>
+
+
+</resources>

@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="app_corner_radius">6dp</dimen>
+</resources>

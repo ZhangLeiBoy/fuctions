@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--全局使用  不可改动 -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 白色背景  无圆角 底部有一条边线 -->
+    <item>
+        <shape>
+            <stroke
+                android:width="1px"
+                android:color="@color/app_line_color" />
+        </shape>
+    </item>
+    <item
+        android:bottom="1px"
+        android:left="0px"
+        android:right="0px"
+        android:top="0px">
+        <shape>
+            <solid android:color="@color/app_bg_card" />
+        </shape>
+    </item>
+</layer-list>

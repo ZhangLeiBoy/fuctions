@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3d99ff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#3d99ff</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!-- 全局主色调-->
+    <color name="app_main_color">#3d99ff</color>
+    <!-- 不可点击状态，与主色调对应-->
+    <color name="app_main_color_uncheck">#aac8e9</color>
+    <!--对话框主色调-->
+    <color name="blue_btn_bg_color">#3d99ff</color>
+    <color name="blue_btn_bg_pressed_color">#0485b7</color>
+    <!-- 区块或全局背景色 -->
+    <color name="app_bg_main">#f7f7f7</color>
+    <color name="app_bg_card">#ffffff</color>
+    <!--列表按下效果-->
+    <drawable name="app_list_item_normal">#ffffff</drawable>
+    <drawable name="app_list_item_click">#d9d9d9</drawable>
+    <color name="app_list_item_normal">#ffffff</color>
+    <color name="app_list_item_click">#d9d9d9</color>
+    <!-- 线条色值 注：分割线为 1px-->
+    <color name="app_line_color">#e4e4e4</color>
+    <color name="app_line_nav_column">#dde0e4</color><!--导航栏或 栏目分割线-->
+    <!-- 文本色值-->
+    <color name="app_text_hint">#a6a6a6</color>
+    <color name="app_text_main">#333333</color>
+    <color name="app_text_second">#8190a7</color>
+    <color name="app_text_second_unckeck">#d0d3d5</color>
+    <color name="app_text_grey">#999999</color>
+    <color name="app_text_tip">#b4b4b4</color>
+    <color name="app_text_delete">#f44336</color>
+    <color name="app_text_uncheck_grey">#b2b2b2</color>
+
+    <color name="app_progress_bar_bg">#eaeaea</color>
+    <color name="app_progress_bar_color">@color/app_main_color</color>
+    <color name="app_progress_bar_second_color">#a6a6a6</color>
+
+</resources>

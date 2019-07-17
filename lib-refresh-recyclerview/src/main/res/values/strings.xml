@@ -1,0 +1,5 @@
+<resources>
+    <string name="loading_tip">数据加载中...</string>
+    <string name="error_tip">数据获取异常，点击重新加载</string>
+    <string name="empty_tip">暂无相关数据</string>
+</resources>

@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+//公共库
+apply from: '../build_support.gradle'
+apply from: '../build_third.gradle'
+
+android {
+    compileSdkVersion rootProject.CompileSdkVersion
+
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        minSdkVersion rootProject.MinSdkVersion
+        targetSdkVersion rootProject.TargetSdkVersion
+        versionCode rootProject.Version_Code
+        versionName rootProject.Version_Name
+    }
+    //忽略校验png格式图片
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    //取消检查
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //刷新加载
+    implementation('com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14')
+    //没有使用特殊Header，可以不加这行
+    implementation('com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14')
+}
